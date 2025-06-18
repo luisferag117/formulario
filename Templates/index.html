@@ -8,40 +8,38 @@
 </head>
 <body>
     <container class="form">
-        <h1> Formulario de Informacion</h1>
+        <h1> Formulario de Información</h1>
         <form id="mainform">
-            <label for="nombre">Nombre Completo:</label>
-            <br>
+            <label for="nombre">Nombre Completo:</label>   
             <input type="text" id="nombre" name="nombre" required>
             <br>
             <label for="edad"> Edad</label>
-            <br>
             <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad">
             <br>
             <label for="codigopostal"> Codigo Postal</label>
-            <br>
             <input type="number" id="codigopostal" name="codigopostal" placeholder="Ingresa tu codigo postal: xxxxxx">
             <br>
             <label for="genero"> Género</label>
-            <br>
+            <div class="opciones-horizontal">
             <label for="mas">Masculino</label>
             <input type="radio" id="genero" name="genero" value="femenino">
             <label for="fem">Femenino</label>
             <input type="radio" id="genero" name="genero" value="masculino">
             <label for="fem">Otro</label>
             <input type="radio" id="genero" name="genero" value="otro">
+            </div>
             <br>
-            <label for="intereses">Intereses (selecciona todos los que apliquen)</label>
-            <br>
-            <label><input type="checkbox" name="intereses" value="Tecnología"> Tecnología </label>
+            <label for="intereses" >Intereses (selecciona todos los que apliquen)</label>
+            <div class="opciones-horizontal">
+            <label><input type="checkbox" name="intereses" value="tecnologia"> Tecnología </label>
             <label><input type="checkbox" name="intereses" value="musica"> Música</label>
             <label><input type="checkbox" name="intereses" value="deporte">Deporte</label>
             <label><input type="checkbox" name="intereses" value="arte">Arte</label>
-            
-            <label for="pais">País:</label><br>
+            </div>  
+            <label for="pais">País:</label>
             <select id="pais" name="pais" place>
             <option value="mexico">México</option>
-            <option value="espana">España</option>
+            <option value="israel">israel</option>
             <option value="argentina">Argentina</option>
             <option value="colombia">Colombia</option>
             <option value="chile">Chile</option>
@@ -56,8 +54,9 @@
             <label for="imagen">Sube tu imagen:</label><br>
             <input type="file" id="imagen" name="imagen" accept="image/*">
              <br>
-            <button type="submit" class="submit-btn"> Enviar formulario</button>
+            <button type="submit" class="submit-btn">Enviar formulario</button>
         </form>
     </container>
+    <script src="../Dynamics/validaciones.js"></script>
 </body>
 </html>
