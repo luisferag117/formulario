@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../Statics/styles/styles.css">
+</head>
+<body>
+    <container class="form">
+        <h1> Formulario de Informacion</h1>
+        <form id="mainform">
+            <label for="nombre">Nombre Completo:</label>
+            <br>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="edad"> Edad</label>
+            <br>
+            <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad">
+            <br>
+            <label for="codigopostal"> Codigo Postal</label>
+            <br>
+            <input type="number" id="codigopostal" name="codigopostal" placeholder="Ingresa tu codigo postal: xxxxxx">
+            <br>
+            <label for="genero"> Género</label>
+            <br>
+            <label for="mas">Masculino</label>
+            <input type="radio" id="genero" name="genero" value="femenino">
+            <label for="fem">Femenino</label>
+            <input type="radio" id="genero" name="genero" value="masculino">
+            <label for="fem">Otro</label>
+            <input type="radio" id="genero" name="genero" value="otro">
+            <br>
+            <label for="intereses">Intereses (selecciona todos los que apliquen)</label>
+            <br>
+            <label><input type="checkbox" name="intereses" value="Tecnología"> Tecnología </label>
+            <label><input type="checkbox" name="intereses" value="musica"> Música</label>
+            <label><input type="checkbox" name="intereses" value="deporte">Deporte</label>
+            <label><input type="checkbox" name="intereses" value="arte">Arte</label>
+            
+            <label for="pais">País:</label><br>
+            <select id="pais" name="pais" place>
+            <option value="mexico">México</option>
+            <option value="espana">España</option>
+            <option value="argentina">Argentina</option>
+            <option value="colombia">Colombia</option>
+            <option value="chile">Chile</option>
+            <option value="peru">Perú</option>
+            <option value="francia">Francia</option>
+            <option value="italia">Otros</option>
+            </select>
+            <br>
+            <label for="comentarios">Comentarios Adicionales</label>
+            <textarea id="comentarios" name="comentarios" rows="5" cols="40" placeholder="Escribe tus comentarios aquí..."></textarea>
+            <br>
+            <label for="imagen">Sube tu imagen:</label><br>
+            <input type="file" id="imagen" name="imagen" accept="image/*">
+             <br>
+            <button type="submit" class="submit-btn"> Enviar formulario</button>
+        </form>
+    </container>
+</body>
+</html>
