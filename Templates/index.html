@@ -11,49 +11,60 @@
         <h1> Formulario de Información</h1>
         <form id="mainform">
             <label for="nombre">Nombre Completo:</label>   
-            <input type="text" id="nombre" name="nombre" required>
-            <br>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><span id="errorNombre" style="color: red;"></span>
             <label for="edad"> Edad</label>
-            <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad">
-            <br>
+                <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad">
+                <br><span id="errorEdad" style="color: red;"></span>
             <label for="codigopostal"> Codigo Postal</label>
-            <input type="number" id="codigopostal" name="codigopostal" placeholder="Ingresa tu codigo postal: xxxxxx">
-            <br>
+                <input type="number" id="codigopostal" name="codigopostal" placeholder="Ingresa tu codigo postal: xxxxxx">
+                <br><span id="errorCP" style="color: red;"></span>
             <label for="genero"> Género</label>
-            <div class="opciones-horizontal">
-            <label for="mas">Masculino</label>
-            <input type="radio" id="genero" name="genero" value="femenino">
-            <label for="fem">Femenino</label>
-            <input type="radio" id="genero" name="genero" value="masculino">
-            <label for="fem">Otro</label>
-            <input type="radio" id="genero" name="genero" value="otro">
-            </div>
-            <br>
+                <div class="opciones-horizontal">
+                    <label for="mas">Masculino</label>
+                    <input type="radio" id="genero" name="genero" value="masculino">
+                    <label for="fem">Femenino</label>
+                    <input type="radio" id="genero" name="genero" value="femenino">
+                    <label for="fem">Otro</label>
+                    <input type="radio" id="genero" name="genero" value="otro">
+                </div>
+                <br><span id="errorGenero" style="color: red;"></span>
             <label for="intereses" >Intereses (selecciona todos los que apliquen)</label>
-            <div class="opciones-horizontal">
-            <label><input type="checkbox" name="intereses" value="tecnologia"> Tecnología </label>
-            <label><input type="checkbox" name="intereses" value="musica"> Música</label>
-            <label><input type="checkbox" name="intereses" value="deporte">Deporte</label>
-            <label><input type="checkbox" name="intereses" value="arte">Arte</label>
-            </div>  
+                <div class="opciones-horizontal">
+                    <label><input type="checkbox" name="intereses" value="tecnologia"> Tecnología </label>
+                    <label><input type="checkbox" name="intereses" value="musica"> Música</label>
+                    <label><input type="checkbox" name="intereses" value="deporte">Deporte</label>
+                    <label><input type="checkbox" name="intereses" value="arte">Arte</label>
+                </div>
+                <br><span id="errorInteres" style="color: red;"></span>  
             <label for="pais">País:</label>
-            <select id="pais" name="pais" place>
-            <option value="mexico">México</option>
-            <option value="israel">israel</option>
-            <option value="argentina">Argentina</option>
-            <option value="colombia">Colombia</option>
-            <option value="chile">Chile</option>
-            <option value="peru">Perú</option>
-            <option value="francia">Francia</option>
-            <option value="italia">Otros</option>
-            </select>
-            <br>
+                <select id="pais" name="pais" place>
+                    <option value="mexico">México</option>
+                    <option value="israel">israel</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="chile">Chile</option>
+                    <option value="peru">Perú</option>
+                    <option value="francia">Francia</option>
+                    <option value="italia">Otros</option>
+                </select>
+                <br><span id="errorPais" style="color: red;"></span>
             <label for="comentarios">Comentarios Adicionales</label>
-            <textarea id="comentarios" name="comentarios" rows="5" cols="40" placeholder="Escribe tus comentarios aquí..."></textarea>
-            <br>
+                <textarea id="comentarios" name="comentarios" rows="5" cols="40" placeholder="Escribe tus comentarios aquí..."></textarea>
+                <br><span id="errorComentarios" style="color: red;"></span>
             <label for="imagen">Sube tu imagen:</label><br>
-            <input type="file" id="imagen" name="imagen" accept="image/*">
-             <br>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+            <br>
+            <label for="captcha">Verificación de seguridad:</label>
+                <div id="contenedorcaptcha">
+                    <div style="display: flex; align-items: center; gap: 1em;">
+                        <label for="captcha" id="preguntaCaptcha"></label>
+                        <input type="number" id="captcha" name="captcha" required>
+                    </div>
+                    <button type="button" id="newCaptcha" onclick="generarCaptcha()">Nuevo Captcha</button>        
+                    <div id="verificacionCaptcha" ></div>
+                </div>
+            <br>
             <button type="submit" class="submit-btn">Enviar formulario</button>
         </form>
     </container>
